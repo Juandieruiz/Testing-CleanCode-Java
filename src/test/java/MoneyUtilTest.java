@@ -9,4 +9,17 @@ public class MoneyUtilTest {
         Assert.assertEquals("€1500.00", money );
     }
 
+    @Test
+    public void moneyNegativeTest() {
+        String money = MoneyUtil.format(-1500.0);
+        Assert.assertEquals("-€1500.00", money );
+    }
+
+    @Test
+    public void newSimbolTest() {
+        String money = MoneyUtil.format(-1500.0, "$");
+        Assert.assertEquals("-$1500.00", money );
+    }
+
+
 }
