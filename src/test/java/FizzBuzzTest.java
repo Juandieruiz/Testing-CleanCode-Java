@@ -39,6 +39,15 @@ public class FizzBuzzTest {
         Assert.assertEquals("Buzz", numbersList.get(9));
         Assert.assertEquals("Buzz", numbersList.get(19));
         Assert.assertEquals("Buzz", numbersList.get(24));
+    }
+
+    @Test
+    public void shouldReturnFizzBuzz_whenNotAMultiplerOf3and5(){
+        List<String> numbersList = game.getNumbers();
+        Assert.assertEquals("FizzBuzz", numbersList.get(14));
+        Assert.assertEquals("FizzBuzz", numbersList.get(29));
+        Assert.assertEquals("FizzBuzz", numbersList.get(44));
+        Assert.assertEquals("FizzBuzz", numbersList.get(59));
 
     }
 
