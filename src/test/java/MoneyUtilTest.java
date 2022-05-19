@@ -21,5 +21,11 @@ public class MoneyUtilTest {
         Assert.assertEquals("-$1500.00", money );
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void SimbolNullTest() {
+        MoneyUtil.format(-1500.0, null);
+        
+    }
+
 
 }

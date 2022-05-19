@@ -8,6 +8,9 @@ public class MoneyUtil {
     }
 
     public static String format(double money, String symbol) {
+        if(symbol == null) {
+            throw new IllegalArgumentException("Symbol cannot be null");
+        }
 
         if(money < 0){
             symbol = "-" + symbol;
