@@ -6,6 +6,8 @@ import java.util.List;
 
 public class FizzBuzzTest {
 
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
     private FizzBuzz game;
 
     @Before
@@ -25,29 +27,29 @@ public class FizzBuzzTest {
     @Test
     public void shouldReturnFizz_whenNotAMultiplerOf3(){
         List<String> numbersList = game.getNumbers();
-        Assert.assertEquals("Fizz", numbersList.get(2));
-        Assert.assertEquals("Fizz", numbersList.get(5));
-        Assert.assertEquals("Fizz", numbersList.get(8));
-        Assert.assertEquals("Fizz", numbersList.get(11));
+        Assert.assertEquals(FIZZ, numbersList.get(2));
+        Assert.assertEquals(FIZZ, numbersList.get(5));
+        Assert.assertEquals(FIZZ, numbersList.get(8));
+        Assert.assertEquals(FIZZ, numbersList.get(11));
 
     }
 
     @Test
     public void shouldReturnBuzz_whenNotAMultiplerOf5(){
         List<String> numbersList = game.getNumbers();
-        Assert.assertEquals("Buzz", numbersList.get(4));
-        Assert.assertEquals("Buzz", numbersList.get(9));
-        Assert.assertEquals("Buzz", numbersList.get(19));
-        Assert.assertEquals("Buzz", numbersList.get(24));
+        Assert.assertEquals(BUZZ, numbersList.get(4));
+        Assert.assertEquals(BUZZ, numbersList.get(9));
+        Assert.assertEquals(BUZZ, numbersList.get(19));
+        Assert.assertEquals(BUZZ, numbersList.get(24));
     }
 
     @Test
     public void shouldReturnFizzBuzz_whenNotAMultiplerOf3and5(){
         List<String> numbersList = game.getNumbers();
-        Assert.assertEquals("FizzBuzz", numbersList.get(14));
-        Assert.assertEquals("FizzBuzz", numbersList.get(29));
-        Assert.assertEquals("FizzBuzz", numbersList.get(44));
-        Assert.assertEquals("FizzBuzz", numbersList.get(59));
+        Assert.assertEquals(FIZZ+BUZZ, numbersList.get(14));
+        Assert.assertEquals(FIZZ+BUZZ, numbersList.get(29));
+        Assert.assertEquals(FIZZ+BUZZ, numbersList.get(44));
+        Assert.assertEquals(FIZZ+BUZZ, numbersList.get(59));
 
     }
 
